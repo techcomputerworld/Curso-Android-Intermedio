@@ -8,6 +8,24 @@
     tools:context=".ui.home.MainActivity">
     <!-- Fragment Container View para trabajar con las vistas de los fragments le asignamos
     el graph_main o el grafo de navegacion -->
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:background="@color/primaryDark"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_gravity="center"
+            android:textColor="@color/secondary"
+            android:fontFamily="@font/dancingscript"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+    </FrameLayout>
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -15,7 +33,7 @@
         android:layout_height="0dp"
         app:navGraph="@navigation/main_graph"
         app:defaultNavHost="true"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
