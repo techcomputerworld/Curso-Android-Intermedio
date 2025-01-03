@@ -10,7 +10,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.techcomputerworld.horoscapp.R
 import com.techcomputerworld.horoscapp.databinding.ActivityMainBinding
-
+import dagger.hilt.android.AndroidEntryPoint
+//para usar Daggerhilt
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
